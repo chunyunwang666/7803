@@ -655,8 +655,8 @@
             name: "hanime1",
             url: "https://wwbwl.lanzn.com/b01884vknc",
             url2: "https://hanime1.me/",
-            icon: "bi bi-film",
-            tags: ["视频"],
+            icon: "",
+            tags: [""],
             buttonText: "下载",
             buttonText2: "访问",
             nameIcons: ["bi bi-android2", "bi bi-globe"]
@@ -978,16 +978,13 @@
                     `<div class="tag" data-original="${tag}">${tag}</div>`
                 ).join('');
                 
-                // 检查是否需要显示第二个按钮
                 const hasSecondButton = software.buttonText2 && software.buttonText2.trim() !== '' && 
                                       software.url2 && software.url2.trim() !== '';
                 
-                // 根据是否有第二个按钮调整CSS类
                 if (!hasSecondButton) {
                     card.classList.add('single-button');
                 }
                 
-                // 生成第二个按钮的HTML（如果有）
                 const secondButtonHTML = hasSecondButton ? 
                     `<button class="download-btn download-btn-2" data-url="${software.url2}">${software.buttonText2}</button>` : 
                     '';
