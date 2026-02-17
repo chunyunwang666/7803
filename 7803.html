@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7803</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #222222;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .link-card:active {
+            transform: scale(0.97);
+        }
+        .big-number {
+            color: #ffffff;
+            font-size: min(18vw, 180px);
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            text-shadow: 0 0 8px rgba(255,255,255,0.4);
+            user-select: none;
+            will-change: transform, opacity;
+            animation: softGlow 2.2s ease-in-out infinite;
+        }
+        @keyframes softGlow {
+            0% { opacity: 1; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
+            50% { opacity: 0.92; text-shadow: 0 0 18px rgba(255,255,255,0.8); }
+            100% { opacity: 1; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
+        }
+        @media (hover: hover) {
+            .link-card:hover .big-number {
+                animation: none;
+                text-shadow: 0 0 25px rgba(255,255,255,0.9);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://chunyunwang666.github.io/7803/" class="link-card" aria-label="前往 7803">
+        <div class="big-number">7803</div>
+    </a>
+</body>
+</html>
